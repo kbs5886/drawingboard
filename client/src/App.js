@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import io from 'socket.io-client';
+
+var socket = io('http://localhost:5000', {transports: ['websocket', 'polling', 'flashsocket']});
+
 
 function App() {
   return (
